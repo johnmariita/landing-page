@@ -63,6 +63,36 @@ body{
 .header .hero-section{
     padding: 50px 250px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .hero-section img{
+    width: 730px;
+    object-fit: contain;
+}
+.header .hero-section .text-area .hero-main-text{
+    font-size: 48px;
+    color: var(--heading-color);
+    text-transform: capitalize;
+    font-weight: 800;
+}
+.header .hero-section .text-area .hero-secondary-text{
+    color: var(--secondary-color);
+    margin-top: 10px;
+    font-size: 18px;
+}
+.header .hero-section .text-area button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: #3882f6;
+    color: var(--heading-color);
+    border: 1px solid var(--heading-color);
+    cursor: pointer;
+}
+.header .hero-section .text-area button:active{
+    background-color: #3d6fd8;
 }
 
 
