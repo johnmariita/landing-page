@@ -1,2 +1,2 @@
 # landing-page
-landing page project at odin
+My second project at odin, a landing page
