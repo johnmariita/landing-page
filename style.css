@@ -12,10 +12,11 @@
 body{
     font-family: 'Roboto', sans-serif;
     width: 100vw;
+    overflow-x: hidden;
 }
 .header{
     width: 100%;
-    height: 80vh;
+    height: 76vh;
     background-color: var(--primary-color);
 }
 .header .nav-bar{
@@ -66,10 +67,18 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 .header .hero-section img{
     width: 730px;
+    position: absolute;
     object-fit: contain;
+    right: 85px;
+    z-index: 1;
+
+}
+.header .hero-section .text-area{
+    z-index: 2;
 }
 .header .hero-section .text-area .hero-main-text{
     font-size: 48px;
@@ -98,10 +107,11 @@ body{
 
 .content-section{
     width: 100vw;
+    padding: 50px 0 200px;
 }
 .content-section .content-header{
     text-align: center;
-    margin: 30px auto 15px;
+    margin: 40px auto 35px;
     text-transform: capitalize;
     color: var(--primary-color);
     font-size: 36px;
@@ -110,19 +120,148 @@ body{
 .content-section .cards{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .content-section .cards .card{
     width: 250px;
     height: 250px;
     margin: 0 25px;
-    border: 2px solid #3882f6;
     border-radius: 15px;
+    box-shadow: -1px 10px 11px #444;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+}
+.content-section .cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: -1.5px 15px 11px #555;
+}
+.card-1{
+    background-image: url(images/messi-wc-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card-2{
+    background-image: url(images/ballon.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card-3{
+    background-image: url(images/trophy.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card-4{
+    background-image: url(images/individual.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card-1::after{
+    content: "Won the World Cup \A First time since Maradona \A and Argentina last did it";
+    white-space: pre;
+    font-size: 18px;
+    font-weight: 450;
+    color: var(--primary-color);
+    text-align: center;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card-2::after{
+    content: "Won the Ballon D'or 8 times \A the most time a footballer \A has won it";
+    white-space: pre;
+    font-size: 18px;
+    font-weight: 450;
+    color: var(--primary-color);
+    text-align: center;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card-3::after{
+    content: "Most decorated footballer \A Won a total of 44 trophies \A No footballer has more";
+    white-space: pre;
+    font-size: 18px;
+    font-weight: 450;
+    color: var(--primary-color);
+    text-align: center;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card-4::after{
+    content: "Won the most individual awards \A Has a total of 55 individual awards \A No on has more";
+    white-space: pre;
+    font-size: 18px;
+    font-weight: 450;
+    color: var(--primary-color);
+    text-align: center;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.quote-section{
+    background-color: var(--secondary-color);
+    padding: 150px 20px 150px;
+}
+.quote-section .quote{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.quote-section .quote q{
+    font-size: 36px;
+    font-weight: 50;
+    font-style: italic;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+}
+.quote-section .quote q::after{
+    content: "-Peter Drury";
+    display: block;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-
-
-
-
+.cta-section{
+    padding: 100px 0;
+}
+.cta-section .banner{
+    width: 60%;
+    border-radius: 10px;
+    padding: 60px 120px;
+    background-color: #3882f6;
+    color: #e5e7eb;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cta-section .banner button{
+    background-color: rgb(56, 130, 246);
+    color: #e5e7eb;
+    padding: 6px 42px;
+    font-size: 18px;
+    font-weight: 500px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.cta-section .banner button:active{
+    background-color: rgb(47, 107, 204);
+    color: #f3f5f8;
+}
+footer{
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 40px;
+}
 
 
 
